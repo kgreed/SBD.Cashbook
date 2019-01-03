@@ -8,6 +8,7 @@ using DevExpress.Persistent.Base;
 
 namespace SBD.Cashbook.Module.BusinessObjects
 {
+    [VisibleInReports]
     [NavigationItem("Main")]
     public class Transaction :BasicBo
     {
@@ -17,13 +18,11 @@ namespace SBD.Cashbook.Module.BusinessObjects
         public Decimal Amount { get; set; }
 
 
-        //public int DebitAccount_Id { get; set; }
-        //[ForeignKey("DebitAccount_Id")]
+     
         [Required]
         public virtual GLAccount DebitAccount { get; set; }
 
-        //public int CreditAccount_Id { get; set; }
-        //[ForeignKey("CreditAccount_Id")]
+   
         [Required]
         public virtual  GLAccount CreditAccount { get; set; }
         

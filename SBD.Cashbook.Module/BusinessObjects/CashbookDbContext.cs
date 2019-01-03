@@ -33,7 +33,7 @@ namespace SBD.Cashbook.Module.BusinessObjects {
         public DbSet<GLAccount> GLAccounts { get; set; }
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Card> Cards { get; set; }
-
+        public DbSet<ReportDataV2> ReportDataV2 { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
